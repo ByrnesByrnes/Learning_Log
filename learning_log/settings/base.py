@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    # Third party apps
+    'storages',
     # My Added apps
     'learning_logs',
     'users',
@@ -145,3 +146,7 @@ CSRF_COOKIE_SECURE              = False
 SECURE_HSTS_SECONDS             = None
 SECURE_HSTS_INCLUDE_SUBDOMAINS  = False
 SECURE_FRAME_DENY               = False
+
+AWS_USERNAME = 'learning_log-user'
+AWS_ACCESS_KEY_ID = 'AKIAIIZWCPFJJNQ3DNGQ'
+AWS_SECRET_KEY = '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'

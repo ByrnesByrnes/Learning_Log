@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    # Third party apps
+    'storages',
     # My Added apps
     'learning_logs',
     'users',
@@ -136,6 +137,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn", "static_root")
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "static_cdn", "media_root")
+
+from learning_log.aws.conf import *
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
