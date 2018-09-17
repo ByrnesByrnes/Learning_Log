@@ -1,0 +1,47 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block content %}
+<div id="container">
+  <div class="container">
+    <div class="col-md-8 mx-auto">
+      <h2>Topics:</h2>
+
+      <h3>Click on a Topic to view your entries:</h3>
+
+      {% for topic in topics %}
+
+      <div class="row topic-row">
+
+        <div class="col-md-3 topic-topic text-truncate">
+          <h4>{{ forloop.counter }}:</h4>
+          <span class="counter"></span>
+
+
+          <a href="{% url 'learning_logs:topic' topic.id %} " class="topics-href">
+            <h4>{{ topic.text|title }}{{ topic.id }}</h4>
+          </a>
+        </div>
+        <div class="col">
+          <h5 class="ptopics"><i class="far fa-clock"></i> {{ topic.date_added|date }}</h5>
+        </div>
+
+        <div class="col delete-b">
+          <form class="topic-delete form-product" action="{% url 'learning_logs:del_topic' topic.id %}" method="get"
+            action2="{% url 'learning_logs:topics' %}">
+            {% csrf_token %}
+            <button name="submit" class="btn" id="btn-del">Delete</button>
+          </form>
+        </div>
+      </div>
+      {% empty %}
+      <li>
+        <p>No Topics have been created!</p>
+      </li>
+      {% endfor %}
+      <hr>
+      <button class="add-topic btn">Add a New Topic</button>
+      {% include 'learning_logs/new_topic.html' %}
+    </div>
+  </div>
+</div>
+{% endblock content %}

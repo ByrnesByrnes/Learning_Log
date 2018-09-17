@@ -1,0 +1,17 @@
+{% extends 'learning_logs/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div id="container">
+  <div class="col-md-6 mx-auto">
+    <h2>Add a New Entry:</h2>
+
+    <h4><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></h4>
+    <form class="form-product" action="{% url 'learning_logs:new_entry' topic.id %}" method="post" action2="{% url 'learning_logs:topic' topic.id %}">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <button name="submit" class="btn btn-add">Add Entry</button>
+    </form>
+  </div>
+</div>
+{% endblock content %}

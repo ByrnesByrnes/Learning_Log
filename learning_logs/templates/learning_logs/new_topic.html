@@ -1,0 +1,13 @@
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="col-md-4" id="newform">
+  <form class="topic-add form-product" action="{% url 'learning_logs:new_topic' %}" method="post" action2="{% url 'learning_logs:topics' %}">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button class="btn btn-add">Submit</button>
+  </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,235 @@
+/* Main index Page */
+:root {
+  --boxshadow: 10px 10px 5px rgb(0, 0, 0);
+  --primary: rgb(0, 0, 0);
+  --secondary: #0003a3;
+  --textshadow: 2px 2px 5px rgb(0, 0, 0);
+  --easeinout: ease-in-out 0.5s;
+}
+
+/* Global */
+body {
+  color: var(--primary);
+}
+#content {
+  margin: 0 0 30px 0;
+}
+li {
+  list-style-type: none;
+}
+a {
+  color: #218fd5;
+  transition: var(--easeinout);
+}
+a:hover {
+  text-decoration: none;
+  color: rgb(226, 106, 29);
+}
+button {
+  color: var(--primary);
+}
+span {
+  color: rgb(115, 31, 117);
+}
+h2 {
+  margin: 0 0 20px 0;
+
+  font-weight: bold;
+  text-indent: 40px;
+}
+h3 {
+  color: #e26a1d;
+}
+h4 {
+  font-weight: bold;
+  margin: 0;
+  display: inline;
+}
+h5 {
+  margin: 0 60px 0 0;
+}
+
+.btn-successs {
+  position: relative;
+  font-weight: bold;
+  color: var(--primary);
+  padding: 10px 40px;
+  border: 2px solid var(--primary);
+  text-transform: uppercase;
+  display: block;
+  border-radius: 32px;
+  background: none;
+  overflow: hidden;
+  transition: all 1s;
+}
+.btn-successs::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) scale(20);
+  height: 10px;
+  width: 10px;
+  background: #ffffff;
+  border-radius: 50%;
+  z-index: -1;
+
+  transition-property: left, transform;
+  transition-delay: 0s, 0s;
+  transition-duration: 1s, 0.5s;
+}
+.btn-successs:hover::before {
+  left: -15px;
+  background: #3fdf00;
+  transform: scale(0.9);
+  transition-delay: 0s, 0.5s;
+}
+.btn-successs::after {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translateY(-50%) scale(20);
+  height: 10px;
+  width: 10px;
+  background: #ffffff;
+  border-radius: 50%;
+  z-index: -1;
+  transition-property: right, transform;
+  transition-delay: 0s, 0s;
+  transition-duration: 1s, 0.5s;
+}
+.btn-successs:hover::after {
+  background: #3fdf00;
+  right: -15px;
+  transform: scale(0.9);
+  transition-delay: 0s, 0.5s;
+}
+/* Button Succes */
+.btn {
+  position: relative;
+  font-weight: bold;
+  color: var(--primary);
+  padding: 10px 40px;
+  border: 2px solid var(--primary);
+  text-transform: uppercase;
+  display: block;
+  border-radius: 32px;
+  background: none;
+  overflow: hidden;
+  transition: all 1s;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) scale(0.9);
+  height: 10px;
+  width: 10px;
+  background: #ffffff;
+  border-radius: 50%;
+  z-index: -1;
+
+  transition-property: left, transform;
+  transition-delay: 0s, 0s;
+  transition-duration: 0.5s, 0.2s;
+}
+.btn:hover::before {
+  left: 15px;
+  background: #fbe157;
+  transform: scale(20);
+  transition-delay: 0s, 0.3s;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translateY(-50%) scale(0.9);
+  height: 10px;
+  width: 10px;
+  background: #ffffff;
+  border-radius: 50%;
+  z-index: -1;
+  transition-property: right, transform;
+  transition-delay: 0s, 0s;
+  transition-duration: 0.5s, 0.2s;
+}
+.btn:hover::after {
+  background: #fbe157;
+  right: 15px;
+  transform: scale(20);
+  transition-delay: 0s, 0.3s;
+}
+/* End Button Success */
+img.image-nav {
+  height: 50px;
+  width: 50px;
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+  transition: all 1s;
+}
+img.image-nav:hover {
+  filter: blur(0);
+}
+.image-index {
+  position: relative;
+  text-align: center;
+  filter: blur(5px) grayscale(100%);
+  -webkit-filter: blur(5px) grayscale(100%);
+  transition: all 1s;
+}
+.image-index:hover {
+  filter: blur(0) grayscale(0%);
+}
+img.index-logo {
+  left: 50%;
+}
+/* Topics Page*/
+.topic-row {
+  margin: 10px 0;
+}
+.topic-topic {
+}
+span.counter {
+  margin: 0 10px;
+}
+.ptopics {
+  display: none;
+}
+
+.topic-delete {
+  float: right;
+}
+button.add-topic {
+  margin: 0 40px 10px 0;
+}
+
+/* Individual Topic with Entries */
+.wells {
+  margin: 10px;
+  text-indent: 30px;
+
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(233, 233, 233, 0.8);
+}
+/* form margin */
+#newform {
+  margin: 0 0 50px 0;
+  display: none;
+}
+/*Footer*/
+footer {
+  z-index: -1;
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}

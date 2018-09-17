@@ -1,0 +1,4 @@
+beautifulsoup4==4.6.3
+Django==1.11.4
+django-crispy-forms==1.7.2
+pytz==2018.5

@@ -1,0 +1,144 @@
+/* Main index Page */
+:root {
+  --boxshadow: 10px 10px 5px rgb(0, 0, 0);
+  --primary: rgb(0, 0, 0);
+  --secondary: #0003a3;
+  --textshadow: 2px 2px 5px rgb(0, 0, 0);
+  --easeinout: ease-in-out 0.1s;
+}
+/* Global */
+main {
+  position: relative;
+  color: var(--primary);
+  background: rgba(200, 200, 200, 0.6);
+  box-shadow: 0 30px 15px rgba(200, 200, 200, 0.6);
+}
+span {
+  color: var(--secondary);
+}
+
+h2 {
+  margin: 25px 0 15px 0;
+  font-weight: bold;
+}
+h4 {
+  display: inline;
+}
+.btn {
+  font-weight: bold;
+  border: solid;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--secondary);
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* index Page*/
+h3.main {
+  text-align: center;
+  font-size: 4rem;
+  color: var(--primary);
+  margin: 100px;
+  font-weight: bold;
+  padding: 75px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  text-shadow: var(--textshadow);
+  filter: blur(10px);
+  filter: grayscale(10px);
+
+  -webkit-filter: grayscale(100%) blur(5px);
+  transition: all 0.5s;
+}
+h3.main:hover {
+  filter: grayscale(0%) blur(0px);
+}
+/* Topics Page */
+div.topic-topic {
+  text-align: left;
+  display: inline;
+}
+
+p.ptopics {
+  display: inline;
+}
+form.topic-delete {
+  margin: 5px 0 5px 0;
+  display: absolute;
+
+  left: 40%;
+  width: 50px;
+}
+button.add-topic {
+  align-content: left;
+}
+/* Entries Page */
+#wholeTopicText {
+  margin: 0 20px 0 20px;
+}
+.panel-heading {
+  margin: 5px 0 10px 0;
+}
+.panel-body {
+  text-align: left;
+  padding: 10px;
+  background: rgba(150, 150, 150, 0.8);
+  border-radius: 10px;
+}
+.wells:last {
+  margin: 0 0 20px 0;
+}
+footer {
+  z-index: 0;
+  color: var(--primary);
+  position: fixed;
+  text-indent: 35px;
+  bottom: 0;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    text-align: center;
+  }
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+  h3.main {
+    font-size: 2rem;
+    margin: 100px 0 0 0;
+    padding: 50px;
+    border-radius: 0px;
+  }
+  div.topics {
+    position: relative;
+    margin: 5px 0 5px 0;
+  }
+  span.title {
+    font-size: 2.5rem;
+  }
+  /* Topics Page */
+  p.ptopics {
+    font-size: 0.8rem;
+  }
+  form.topic-delete {
+    top: -35px;
+    left: 67%;
+    width: 50px;
+  }
+  button.add-topic {
+    align-content: left;
+  }
+}

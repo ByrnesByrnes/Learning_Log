@@ -1,0 +1,41 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS give them a self folder -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main3.css' %}">
+  <title>Learning Log</title>
+</head>
+
+<body>
+
+  <div class="container">
+    {% include 'learning_logs/navbar.html' %}
+  </div>
+  <main>
+    <div id="content">
+      {% block content %}
+
+      {% endblock content %}
+    </div>
+  </main>
+  <footer>
+    <p>Powered: by Myron R. Byrnes</p>
+  </footer>
+  {% include 'learning_logs/js.html' %}
+  <script type="text/javascript" src="{% static 'javascript/button.js' %}"></script>
+</body>
+
+</html>
