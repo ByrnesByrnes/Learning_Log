@@ -233,3 +233,13 @@ footer {
   padding: 1rem;
   text-align: center;
 }
+
+@media (max-width: 500px) {
+  img.index-logo {
+    width: 300px;
+    height: 300px;
+  }
+  .btn {
+    padding: 5px 10px;
+  }
+}
